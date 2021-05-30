@@ -2,7 +2,7 @@
 $conn = mysqli_connect('localhost', 'ysj','1234','dogeprison');
 $hashedPassword = password_hash($_POST['PO_password'], PASSWORD_DEFAULT);
 echo $hashedPassword;
-$sql = "INSERT INTO prison_officer(PO_id,PO_name,PO_password) VALUES('{$_POST['PO_id']','{$_POST['PO_name']','{$hashedPassword}', NOW())";
+$sql = "INSERT INTO prison_officer(PO_id, PO_name, PO_password) VALUES('{$_POST['PO_id']}','{$_POST['PO_name']}','{$hashedPassword}', NOW())";
 echo $sql;
 $result = mysqli_query($conn, $sql);
 
