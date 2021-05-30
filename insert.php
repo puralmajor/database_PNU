@@ -1,9 +1,9 @@
 <?php
 $conn = mysqli_connect(
   'localhost',
-  'ysj',
-  '1234',
-  'testdb');
+  'Doge',
+  'rudtlr2909.',
+  'dogeprison');
   # title, description 이라는 사용자가 입력한 정보를 그대로 php에 입력하는 행위는 보안에 취약, 따라서 관리 필요
 
   $filtered = array(

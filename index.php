@@ -1,9 +1,9 @@
 <?php
 $conn = mysqli_connect(
   'localhost', // 주소
-  'ysj',
-  '1234',
-  'testdb'); // 데이터베이스 이름
+  'Doge',
+  'rudtlr2909.',
+  'dogeprison'); // 데이터베이스 이름
 
 $sql = "SELECT * FROM branch";
 $result = mysqli_query($conn, $sql);

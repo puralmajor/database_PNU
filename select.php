@@ -11,7 +11,7 @@
 </html>
 
 <?php
-    $connection = new mysqli('localhost', 'ysj','1234','testdb');
+    $connection = new mysqli('localhost', 'Doge','rudtlr2909.','dogeprison');
 
     $sql = 'select * from account; ';
     $result = mysqli_query($connection,$sql);
