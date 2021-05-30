@@ -1,21 +1,9 @@
 <?php
-$conn = mysqli_connect(
-  'localhost', // 주소
-  'ysj',
-  '1234',
-  'testdb'); // 데이터베이스 이름
-
-$sql = "SELECT * FROM branch";
-$result = mysqli_query($conn, $sql);
-
-?>
-
-<?php
-$PO_id = $_POST['PO_id'];
-$PO_password = $_POST['PO_password'];
+$PO_id = $_GET['PO_id'];
+$PO_password = $_GET['PO_password'];
 
 if(!is_null($PO_id)) {
-  $p_conn = mysqli_connect('localhost', 'ysj', '1234', 'testdb');
+  $p_conn = mysqli_connect('localhost', 'ysj', '1234', 'dogeprison');
   $p_sql = "SELECT PO_password FROM PROSON_OFFICER WHERE PO_id = '.$PO_id';";
   $p_result = mysqli_query($p_conn, $p_sql);
   while($p_row = mysqli_fetch_array($p_result)) {
@@ -79,7 +67,7 @@ if(!is_null($PO_id)) {
         }
       ?>
       <div class="bottomText">
-        Don't you have ID? <a href="#">sign up</a>
+        <a href="/sign.php">신규등록</a>
       </div>
     </form>
   </body>
