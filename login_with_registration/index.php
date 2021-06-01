@@ -17,6 +17,7 @@
         <input type="password" name="password" placeholder="비밀번호"><br>
 
         <button type="submit">submit</button>
+        <a href="signup.php" class="ca">sign up</a>
     </form>
 </body>
 </html>
