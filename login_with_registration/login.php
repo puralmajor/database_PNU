@@ -22,10 +22,8 @@ if(isset($_POST['id']) && isset($_POST['password'])) {
         header("Location: index.php?error=비밀번호를 입력하세요.");
         exit();
     }else{
-        //암호화
-        $pass = md5($pass);
-        
-        $sql = "SELECT * FROM prison_officer where  PO_id='$id' AND PO_password='$pass'";
+       
+        $sql = "SELECT * FROM prison_officer where  PO_id='$id' AND PO_password= '$pass' ";
         $result = mysqli_query($conn,$sql);
 
         if(mysqli_num_rows($result) === 1) {

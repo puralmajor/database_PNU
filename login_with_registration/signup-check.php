@@ -43,12 +43,8 @@ if(isset($_POST['id']) && isset($_POST['password']) && isset($_POST['name']) && 
         header("Location: signup.php?error=입력하신 비밀번호가 서로 다릅니다.&$user_data");
         exit();
     }else{ 
-        //암호화
-        $pass = md5($pass);
-
         $sql = "SELECT * FROM prison_officer where  PO_id='$id' ";
         $result = mysqli_query($conn,$sql);
-    
 
         if(mysqli_num_rows($result) > 0) {
             header("Location: signup.php?error=이미 존재하는 ID입니다.&$user_data");
