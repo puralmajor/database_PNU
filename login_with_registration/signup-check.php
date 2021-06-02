@@ -53,7 +53,8 @@ if(isset($_POST['id']) && isset($_POST['password']) && isset($_POST['name']) && 
             $sql2 = "INSERT INTO prison_officer(PO_id,PO_name,PO_rank,PO_password,PRISON_BUILDING_PB_id) VALUES('$id', '$name', '$rank', '$password', '$building')";
             $result2 = mysqli_query($conn,$sql2);
             if($result2) {
-                header("Location: signup.php?success=정상적으로 등록되었습니다.");
+                echo "<script:javascript> alert(\"등록완료\');</script>";
+                header("Location: signup.php?success=정상적으로 등록되었습니다.");      
                 exit();
             }else{
                 header("Location: signup.php?error=unknown error occured. please contact with administor&$user_data");
