@@ -1,9 +1,9 @@
 <?php
 $conn = mysqli_connect(
   'localhost', // 주소
-  'ysj',
-  '1234',
-  'testdb'); // 데이터베이스 이름
+  'root',
+  'wlsals!12',
+  'dogeprison'); // 데이터베이스 이름
 
 $sql = "SELECT * FROM branch";
 $result = mysqli_query($conn, $sql);
@@ -24,5 +24,10 @@ $result = mysqli_query($conn, $sql);
       <p><input type="text" name="b_addr" placeholder="죄질 "></p>
       <p><input type="submit"></p>
     </form>
+    <button type="button" class="btn btn-primary active" id="btn" 
+   onclick="document.location.href='ri.php'">방으로</button>
+    <button type="button" class="btn btn-primary active" id="btn" 
+   onclick="document.location.href='po.php'">교도관조회</button>
+        
   </body>
 </html>
