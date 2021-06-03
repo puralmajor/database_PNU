@@ -1,23 +1,10 @@
-# database_PNU<?php
-    ini_set('error_reporting','E_ALL ^ E_NOTICE');
-?>
-<!DOCTYPE html>
-<meta charset="UTF-8">
-<html>
-    <head>
-        <title>교도관 조회 페이지</title>
-        <br>
-    </head>
-    <body>
-        <div>
-            <h3><p>교도관 조회 페이지</p></h3>
-            <h4><p>교도관의 id를 입력하세요</p></h4>
-            <form action="POfficer2.php" method="POST">
-                <p><input type="int" name="PO_id" placeholder="ID ?"></p>
-                <p><input type="submit"></p>
-            <table>
-               
-          
-            </table>
-        </div>
-     
+해당 프로젝트는 
+mysql 실습을 위해 작성된 프로젝트입니다.
+
+프론트 : HTML, CSS, JavaScript
+
+백 : PHP
+
+를 이용해 구현하였으며,
+
+프로젝트 내용은 교도관이 죄수와 감방을 관리합니다.
