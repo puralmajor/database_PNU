@@ -1,0 +1,46 @@
+body {
+  background-image: url("/img/prison.jpeg");
+  background-repeat: round;
+  background-size: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+* {
+  font-family: cursive;
+  box-sizing: border-box;
+  color: #ccc;
+}
+
+form {
+  width: 630px;
+  height: 200px;
+  border: 2px solid rgba(58, 57, 57);
+  padding: 30px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("/img/dark.jpeg");
+  border-radius: 7px;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+div {
+  text-align: center;
+}
+a {
+  font-family: fantasy;
+  font-weight: 1000;
+  float: center;
+  padding: 10px 10px;
+  color: #42000096;
+  border-radius: 3px;
+  margin-right: 10px;
+  left: 30px;
+}
+
+a:hover {
+  opacity: 0.7;
+}
