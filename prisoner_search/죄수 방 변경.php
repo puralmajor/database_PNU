@@ -12,12 +12,12 @@
     </head>
     <body align = center>
         <div>
-            <h3><p>죄수 방 변경<p></h3>
-
-                <button type="button" class="btn btn-primary active" id="btn" 
-	            onclick="document.location.href='죄수조회.php'">조회로 돌아가기</button>
+                
 
                 <form method="post" action = "죄수 방 변경.php">
+                    <h3><p>죄수 방 변경<p></h3>
+                    <button type="button" class="btn btn-primary active" id="btn" 
+	            onclick="document.location.href='죄수조회.php'">조회로 돌아가기</button><br>
                     <p>죄수번호: <input type="text" name = "u_p_number" /><p>
                     <p>변경될 방: <input type="text" name = "u_prison_room_pr_number" ><p>
                     <input type="submit" value="방 변경 확인"/>
@@ -26,21 +26,15 @@
                      <?php
                     $sql = "update prisoner set prison_room_pr_number = '".$_POST['u_prison_room_pr_number']."' where p_number = '".$_POST['u_p_number']."';";
                     $result = mysqli_query($conn, $sql);
-                    mysqli_close($conn);
-                    ?>
-                 </form>
-
-
-
-
+                    ?>          
             <table align = center>
                 <thead>
                     <tr>
-                        <th>방 번호</th>
-                        <th>현재 인원수</th>
-                        <th>살인범 수</th>
-                        <th>성범죄자 수</th>
-                        <th>마약범 수</th>
+                        <th width='120px'>방 번호</th>
+                        <th width='120px'>현재 인원수</th>
+                        <th width='120px'>살인범 수</th>
+                        <th width='120px'>성범죄자 수</th>
+                        <th width='120px'>마약범 수</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -54,7 +48,7 @@
                         mysqli_close($conn);
                     ?>
                 </tbody>     
-          
+                </form>
             </table>
         </div>
     </body>

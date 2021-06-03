@@ -68,7 +68,7 @@
             <button type="button" class="btn btn-primary active" id="btn" 
                 onclick="document.location.href='../prisoner_search/죄수삭제1.php'">죄수 삭제</button>
             <button type="button" class="btn btn-primary active" id="btn" 
-                onclick="document.location.href='prchange.php'">죄수 방 정보 변경</button>
+                onclick="document.location.href='../prisoner_search/죄수 방 변경.php'">죄수 방 정보 변경</button>
         
         </div>
     </body>
