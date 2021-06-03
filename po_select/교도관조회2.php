@@ -1,8 +1,12 @@
+<?php
+    include "../connection.php";
+?>
 <!DOCTYPE html>
 <meta charset="UTF-8">
 <html>
     <head>
         <title>교도관 조회</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
         <br>
     </head>
     <body>
@@ -21,7 +25,6 @@
                 </thead>
                 <tbody>
                     <?php
-                        $conn = new mysqli('localhost', 'root', 'wlsals!12', 'dogeprison');
                         $sql = "select po_id,po_name,po_rank,prison_building_pb_id from prison_officer where po_name = '".$_POST['po_name']."';";
                         $result  = mysqli_query($conn, $sql);
                         while($row = mysqli_fetch_array($result)){

@@ -1,9 +1,14 @@
+<?php
+    include "../connection.php";
+?>
+
 <!DOCTYPE html>
 <meta charset="UTF-8">
 <html>
     <head>
         <title>죄수  금월 출소자 페이지</title>
         <br>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
         <div>
@@ -22,7 +27,6 @@
                 </thead>
                 <tbody>
                     <?php
-                        $conn = new mysqli('localhost', 'root', 'wlsals!12', 'dogeprison');
                         $sql = "select p_number,p_name,p_crime,p_admission_date,p_release_date,p_sentence from prisoner where p_release_date = '".$_POST['p_release_date']."';";
                         $result  = mysqli_query($conn, $sql);
                         while($row = mysqli_fetch_array($result)){

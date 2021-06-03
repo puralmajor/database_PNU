@@ -3,7 +3,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   flex-direction: column;
 }
 
@@ -13,7 +12,7 @@ body {
 }
 
 form {
-  width: 500px;
+  width: 90%;
   border: 2px solid #ccc;
   padding: 30px;
   background: #fff;
@@ -88,23 +87,4 @@ h1 {
 
 .ca:hover {
   text-decoration: underline;
-}
-
-table {
-  border-top: 2px solid #444444;
-  border-collapse: collapse;
-}
-tr {
-  border-bottom: 2px solid #444444;
-  padding: 2px;
-}
-td {
-  border-bottom: 1px solid red;
-  padding: 6px;
-}
-.text {
-  text-decoration: underline;
-  text-align: center;
-  padding-top: 1px;
-  color: #000000;
 }

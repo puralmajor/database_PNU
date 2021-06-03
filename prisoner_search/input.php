@@ -82,7 +82,7 @@
 
         <button type="submit">submit</button>
 
-        <a href="index.php" class="ca">이전페이지로 돌아가기</a>
+        <a href="죄수조회.php" class="ca">이전페이지로 돌아가기</a>
     </form>
 </body>
 </html>

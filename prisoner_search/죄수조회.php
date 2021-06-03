@@ -1,33 +1,14 @@
 <?php
     ini_set('error_reporting','E_ALL ^ E_NOTICE');
+    include "../connection.php";
 ?>
 <!DOCTYPE html>
 <meta charset="UTF-8">
 <html>
 
-<style>
-        table{
-                border-top: 2px solid #444444;
-                border-collapse: collapse;
-        }
-        tr{
-                border-bottom: 2px solid #444444;
-                padding: 2px;
-        }
-        td{
-                border-bottom: 1px solid red;
-                padding: 6px;
-        }
-        .text{
-            text-decoration: underline;
-                text-align:center;
-                padding-top:1px;
-                color:#000000;
-        }       
-</style>
-
     <head>
         <title>죄수 조회 페이지</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
         <br>
     </head>
     <body align = center>
@@ -39,21 +20,20 @@
                 <input type="submit" value="검색"/>
             
                 <button type="button" class="btn btn-primary active" id="btn" 
-	            onclick="document.location.href='벌점부여.php'">벌점 부여</button></p>
+	            onclick="document.location.href='벌점부여.php'">벌점 부여</button>
 
                 <button type="button" class="btn btn-primary active" id="btn" 
-	            onclick="document.location.href='벌점부과.php'">죄수 추가</button>
+	            onclick="document.location.href='input.php'">죄수 추가</button>
                 <button type="button" class="btn btn-primary active" id="btn" 
-	            onclick="document.location.href='벌점부과.php'">죄수 삭제</button>
+	            onclick="document.location.href='죄수삭제1.php'">죄수 삭제</button>
                 
                 <button type="button" class="btn btn-primary active" id="btn" 
-	            onclick="document.location.href='죄수 방 변경.php'">죄수 방 정보 변경</button></p>
+	            onclick="document.location.href='죄수 방 변경.php'">죄수 방 정보 변경</button><br>
             
                 <?php
-                    $conn = new mysqli('localhost', 'root', 'sms0626', 'Dogeprison');
                     $sql = "select P_number,P_name,P_crime,P_admission_date,P_release_date,P_crime_record,P_age,P_sentence,P_penalty from Prisoner where P_number like '%" .$_POST['p_number']."%' order by P_number;";
                     $result = mysqli_query($conn, $sql);
-                    echo "<table border=1 align = center>
+                    echo "<br><br><table border=1 align = center>
                             <thead>
                                 <tr>
                                 <th width = 80 align=center bgcolor=#ffeecc>죄수번호</th>

@@ -1,13 +1,15 @@
-
+<?php
+  include "../connection.php";
+?>
 <!doctype html>
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>삭제완료!</title>
   </head>
   <body>
   <?php
-        $conn = new mysqli('localhost', 'root', 'wlsals!12', 'dogeprison');
         $sql = "delete from prisoner where p_release_date = '".$_POST['p_release_date']."';";
         $result = mysqli_query($conn, $sql);
         mysqli_close($conn);

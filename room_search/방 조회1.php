@@ -7,13 +7,15 @@
     <head>
         <title>방 조회 페이지</title>
         <br>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
         <div>
-            <h3><p>방 조회 페이지</p></h3>
-            <h4><p>방 번호를 입력하세요</p></h4>
-            <form action="room.php" method="POST">
-                <p><input type="varchar" name="PR_number" placeholder=" ?"></p>
+            <h2><p>방 조회 페이지</p></h2>
+            
+            <form action="방조회2.php" method="POST">
+                <h2>방 번호를 입력하세요</h2>
+                <p><input type="text" name="PR_number" placeholder="방번호"></p>
                 <p><input type="submit"></p>
             
             <table>

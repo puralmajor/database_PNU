@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include "connection.php";
+include "../connection.php";
 
 if(isset($_POST['id']) && isset($_POST['password']) && isset($_POST['name']) && isset($_POST['passwordCheck']) && isset($_POST['building']) && isset($_POST['rank'])) {
 

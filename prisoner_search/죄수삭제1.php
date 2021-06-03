@@ -5,6 +5,7 @@
   <head>
     <meta charset="utf-8">
     <title>죄수 삭제</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
     <h1>이번 달의 출소자는?</h1>
