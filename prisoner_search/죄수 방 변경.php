@@ -1,33 +1,13 @@
 <?php
     ini_set('error_reporting','E_ALL ^ E_NOTICE');
+    include "../connection.php";
 ?>
 <!DOCTYPE html>
 <meta charset="UTF-8">
 <html>
-
-<style>
-        table{
-                border-top: 2px solid #444444;
-                border-collapse: collapse;
-        }
-        tr{
-                border-bottom: 2px solid #444444;
-                padding: 2px;
-        }
-        td{
-                border-bottom: 1px solid red;
-                padding: 6px;
-        }
-        .text{
-            text-decoration: underline;
-                text-align:center;
-                padding-top:1px;
-                color:#000000;
-        }       
-</style>
-
     <head>
         <title>죄수 방 변경 페이지</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
         <br>
     </head>
     <body align = center>
@@ -44,7 +24,6 @@
     
 
                      <?php
-                    $conn = new mysqli('localhost', 'root', 'sms0626', 'dogeprison');
                     $sql = "update prisoner set prison_room_pr_number = '".$_POST['u_prison_room_pr_number']."' where p_number = '".$_POST['u_p_number']."';";
                     $result = mysqli_query($conn, $sql);
                     mysqli_close($conn);
@@ -66,7 +45,6 @@
                 </thead>
                 <tbody>
                     <?php
-                        $conn = new mysqli('localhost', 'root', 'sms0626', 'dogeprison');
                         $sql3 = "select prison_room_pr_number, count(prison_room_pr_number),sum(p_crime = '살인'),sum(p_crime = '성범죄'),sum(p_crime = '마약') from prisoner GROUP BY PRISON_ROOM_PR_number HAVING COUNT(PRISON_ROOM_PR_number)>0 order by count(prison_room_pr_number);";
 
                         $result  = mysqli_query($conn, $sql3);

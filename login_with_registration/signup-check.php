@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include "connection.php";
+include "../connection.php";
 
 if(isset($_POST['id']) && isset($_POST['password']) && isset($_POST['name']) && isset($_POST['passwordCheck']) && isset($_POST['building']) && isset($_POST['rank'])) {
 
@@ -50,7 +50,7 @@ if(isset($_POST['id']) && isset($_POST['password']) && isset($_POST['name']) && 
             header("Location: signup.php?error=이미 존재하는 ID입니다.&$user_data");
             exit();
         }else{
-            $sql2 = "INSERT INTO prison_officer(PO_id,PO_name,PO_rank,PO_password,PRISON_BUILDING_PB_id) VALUES('$id', '$name', '$rank', '$password', '$building')";
+            $sql2 = "INSERT INTO prison_officer(PO_id,PO_name,PO_rank,PO_password,PRISON_BUILDING_PB_id) VALUES('$id', '$name', '$rank', '$pass', '$building')";
             $result2 = mysqli_query($conn,$sql2);
             if($result2) {
                 echo "<script:javascript> alert(\"등록완료\');</script>";
