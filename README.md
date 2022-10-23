@@ -1,3 +1,6 @@
+
+![image](https://user-images.githubusercontent.com/71024217/197380384-2df46d44-8659-4abe-9b74-a307e5212bc3.png)
+
 해당 프로젝트는 
 mysql 실습을 위해 작성된 프로젝트입니다.
 
